@@ -19,7 +19,7 @@ public class BankDaoImpl implements Dao{
 		 */
 		Session session = HibernateConnectionUtil.getSession();
 		
-		BankUser returnedUser = (BankUser) session.get(BankUser.class, 1);
+		BankUser returnedUser = (BankUser) session.get(BankUser.class, user.getUserId());
 		
 		/*
 		 * 	calling a 2nd time with the same primary key will result in pulling the record from level 1 cache,
@@ -87,8 +87,8 @@ public class BankDaoImpl implements Dao{
 		 *  org.hibernate.LazyInitializationException thrown when accessing something that was "lazy loaded"
 		 *  
 		 */
-//		BankUser user = (BankUser) session.get(BankUser.class, 3);
-		BankUser user = (BankUser) session.load(BankUser.class, 2);
+		BankUser user = (BankUser) session.get(BankUser.class, 3);
+//		BankUser user = (BankUser) session.load(BankUser.class, 2);
 		
 		System.out.println(user.getClass() + ": is this the bank user class?");
 //		System.out.println(user.getUsername() + ": bankuser");

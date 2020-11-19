@@ -10,12 +10,27 @@
 	</properties>
   
   <dependencies>
+  
+  	<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.9</version>
+	</dependency>
   	<!-- Hibernate Dependencies -->
+  	<!-- 
+  		<dependency>
+  			<groupId>org.hibernate</groupId>
+  			<artifactId>hibernate-ehcache</artifactId>
+  			<version>4.3.4.Final</version>
+		</dependency>
+	-->
+		
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>3.6.10.Final</version>
         </dependency> 
+       
         <!-- Hibernate Logging dependency -->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -27,6 +42,8 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>3.6.10.Final</version>
         </dependency>
+        
+        
         <!-- Level 2 Cache Dependency -->
         <dependency>
             <groupId>net.sf.ehcache</groupId>

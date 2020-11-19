@@ -2,6 +2,8 @@ package com.revature.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -13,6 +15,7 @@ public class BankAccount {
 	
 	@Id
 	@Column(name="BA_ID")
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int baNumber;
 	
 	@Column(name="BA_BALANCE")
